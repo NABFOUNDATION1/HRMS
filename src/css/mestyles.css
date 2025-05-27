@@ -1,0 +1,129 @@
+.header-logo
+{
+    width:100px;
+
+}
+body
+{
+    background-color:#e3edf9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.feature-description a:hover{
+
+    text-decoration: none;
+    opacity:50%;
+    
+
+
+
+}
+#sidebar
+{
+    background-color: #121c3e;
+}
+.card
+{
+    background-color: transparent;
+    perspective: 1500px;
+
+    height:4.5rem;
+    
+    border:none;
+    overflow:hidden;
+
+}
+
+.card-inner
+{
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.card:hover .card-inner{
+    transform:rotateX(180deg);
+}
+
+.front-view, .back-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /*safari compatibility*/
+    backface-visibility: hidden;
+  }
+.front-view
+{
+    background-color: #e24d34;
+
+}
+.card-body
+{
+    width:100%;
+    height:100%;
+
+}
+.back-view
+{
+    background-color: #e24d34;
+    text-align: center;
+    transform:rotateX(180deg);
+
+    
+}
+
+  
+  .employee-list {
+    list-style: none;
+  }
+  
+  .employee-item {
+    background-color: #e3edf9;
+  }
+  
+  .btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .employee-information::-webkit-scrollbar {
+    width: 10px;
+    height:5px;
+  }
+  
+  .employee-information::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 5px;
+    
+  }
+  
+  .employee-information::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+
+  
+  
+  .info-subcontainer
+  {
+    border-style:solid;
+    border-width:3px;
+    border-color: #121c3e;
+  }
+  
+  .btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+#addNewBtn
+{
+    margin-top:2rem;
+    margin-left:32rem;
+}
