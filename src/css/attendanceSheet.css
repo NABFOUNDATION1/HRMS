@@ -1,0 +1,49 @@
+body
+{
+    background-color: #e3edf9;
+    
+}
+.attendance-table
+{
+    background-color: white;
+    width:100%;
+    margin-top: 1rem;
+    
+    
+}
+.table-wrapper {
+    
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+#sidebar
+{
+    background-color: #121c3e;
+}
+.feature-description a:hover{
+
+    text-decoration: none;
+    opacity:50%;
+}
+th{
+    height:4rem;
+}
+th,td,tr{
+    border: 1px solid;
+    border-collapse:collapse;
+}
+th,td{
+    text-align:center;
+    white-space: nowrap;
+  vertical-align: middle;
+}
+td,tr{
+    padding:5px;
+}
+
+tr :hover
+{
+    background-color: #e3edf9;
+}

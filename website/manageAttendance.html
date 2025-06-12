@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+
+    
+    <link rel="stylesheet" href="../src/css/mastyles.css">
+
+
+    <title>Manage Attendance</title>
+</head>
+
+<body>
+    
+    <header class="header top-0 start-0 end-0 z-3 m-4">
+
+        <div class="header-container d-flex justify-content-between shadow-sm p-2 rounded-1">
+
+            <div class="header-icons">
+                <a class="btn mb-1" href="./dashboard.html"><i class="fs-5 bi bi-house-fill"> </i></a>
+             <button type="button" id= "notifications" data-bs-toggle="modal" data-bs-target="#notificationsModal" style="border:none; background-color: transparent;">
+                <i class="bi bi-bell"> </i>
+
+             </button>
+            </div>
+             <form role="search">
+                <div class="input-group">
+                    <select class="form-select text-white" style="max-width: 200px ;background-color: #121c3e;">
+                        <option selected> All candidates</option>
+                        <option> Present Candidates </option> <!-- More to be added and confirmed-->
+    
+                    </select>
+                    <input id="search" type="search" class="form-control" placeholder="Search">
+    
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    
+                </div>
+            </form>
+
+            <button class="bg-secondary p-1 rounded-1 ms-5">
+                Previous Employees
+            </button>
+        </div>
+
+    </header>
+
+    <!--Modal for notifications popup , triggered by bells icon in header -->
+    <div class="modal fade" id="notificationsModal" aria-hidden="true"> 
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <h5 class="text-center">Notifications</h5>
+
+                    </div> 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Notif 1</li>
+                        <li> Notif 2</li>
+                        <li> Notif 3</li>
+                    </ul>
+                </div>  <!-- Modal footer can be added with buttons like mark as read or something if functionalities needed-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark"> Mark as read </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="main-container d-flex flex-row">
+        <!--Sidebar-->
+        <nav class="d-flex flex-column  text-white vh-100 p-3 rounded-3 shadow-lg"  id="sidebar" style="width:17rem">
+            
+            <div class="sidebar-user d-flex flex-row align-items-center  mb-4 border-bottom pb-3">
+                <div class="sidebar-img me-5">
+                    <img src="../assets/images/employees.png" alt="profile" class="rounded-circle border border-white" style="width:60px; height: 60px; ">
+
+                </div>
+                <div class="sidebar-info">
+                    <h5 class="mb-0">user</h5>
+                    <small class="text-light opacity-75"> user@nabard.org</small>
+                </div>
+            </div>
+            
+            <div class="sidebar-features d-flex flex-column justify-content-around flex-grow-1">
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-person-square fs-3"> </i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="./profile.html"> Profile </a>
+                    </div>
+
+                </div>
+
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-person fs-3"> </i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="./manageEmployee.html"> Manage Employees</a>
+                    </div>
+
+                </div>
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-calendar-check fs-3"> </i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="#"> Manage Attendance </a>
+                    </div>
+
+                </div>
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-person-badge fs-3"> </i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="./manageInterns.html"> Manage Interns </a>
+                    </div>
+
+                </div>
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-bag-fill fs-3"></i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="#">Leave Request</a>
+                    </div>
+
+                </div>
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-briefcase-fill fs-3"></i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="#">Tour Request</a>
+                    </div>
+
+                </div>
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-book fs-3"> </i>
+                    </div>
+
+                    <div class="feature-description ms-3">
+                        <a class="mb-0  text-light" href="#">Policies</a>
+                    </div>
+
+                </div>
+
+                <div class="feature d-flex flex-row align-items-center ">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-power fs-3"> </i>
+                    </div>
+
+                    <button type="button" id="logoutButton" class="btn btn-danger">Logout </button>
+
+                </div>
+
+                
+            </div>          
+    </nav> <!--End of sidebar-->
+        <!--Cards and employee info , payslip will come here  flex-grow will be 1-->
+        <div class="content-container flex-grow-1">
+
+            <div class="sub-container d-flex flex-column">
+                <div class="card-container d-flex flex-row justify-content-around"> 
+                    <div class="card" style="width:15rem;">
+                        <div class="card-inner">
+                        <div class="front-view rounded-2" style="background-color: #3e71ba;">
+                        <div class="card-body d-flex flex-row  justify-content-evenly align-items-center">
+                            
+                            <h5 class="card-title mb-0"> Total Employees</h5>
+    
+                            <i class="fs-4 card-title bi bi-person mb-0"> </i>
+                         </div>
+                        </div>
+                        <div class="back-view fs-1 rounded-2" id="totalEmployees" style="background-color: #3e71ba;" > <!-- Will have to fetch from database-->
+                                50
+                        </div>
+                      </div>
+                    </div><!--Card body ends--> 
+
+                    <div class="card" style="width:15rem;">
+                        <div class="card-inner">
+                        <div class="front-view rounded-2" style="background-color: #008640;">
+                        <div class="card-body d-flex flex-row  justify-content-evenly align-items-center">
+                            
+                            <h5 class="card-title mb-0"> Total Present</h5>
+    
+                            <i class="fs-4 card-title bi bi-calendar-check mb-0"> </i>
+                         </div>
+                        </div>
+                        <div class="back-view fs-1 rounded-2" id="presentEmployees" style="background-color: #008640;" > <!-- Will have to fetch from database-->
+                                45
+                        </div>
+                      </div>
+                    </div><!--Card body ends--> 
+                    
+                    <div class="card" style="width:15rem;">
+                        <div class="card-inner">
+                        <div class="front-view rounded-2" style="background-color: #e24d34;">
+                        <div class="card-body d-flex flex-row  justify-content-evenly align-items-center">
+                            
+                            <h5 class="card-title mb-0"> On Leave</h5>
+    
+                            <i class="fs-4 card-title bi bi-house mb-0"> </i>
+                         </div>
+                        </div>
+                        <div class="back-view fs-1 rounded-2" id="absentEmployees" style="background-color: #e24d34;"> <!-- Will have to fetch from database-->
+                                5
+                        </div>
+                      </div>
+                    </div><!--Card body ends--> 
+                    <div class="card" style="width:15rem;">
+                        <div class="card-inner">
+                        <div class="front-view rounded-2" style="background-color: #f1d333;">
+                        <div class="card-body d-flex flex-row  justify-content-evenly align-items-center">
+                            
+                            <h5 class="card-title mb-0"> On Tour</h5>
+    
+                            <i class="fs-4 card-title bi bi-luggage mb-0"> </i>
+                         </div>
+                        </div>
+                        <div class="back-view fs-1 rounded-2" id="touringEmployees" style="background-color: #f1d333;"> <!-- Will have to fetch from database-->
+                                50
+                        </div>
+                      </div>
+                    </div><!--Card body ends-->  
+                </div> <!--Card container ends (flex row)-->   
+                
+                <div class="info-container m-4 p-3">
+                    <div class="info-subcontainer d-flex flex-column gap-4 m-5">
+                        <div class="attendance-information overflow-auto bg-white w-100 rounded-2 p-3">
+                          
+                          <ul class="attendance-list p-0 m-0">
+                            <!--li replicated here for demonstration. loops to be used-->
+                            <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                              <div class="d-flex align-items-center gap-2">
+                                <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                <span class="fw-semibold">Kedar Rane</span>
+                              </div>
+                              <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                 10:15
+                              </div>
+                              <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-warning text-success">Approve</button>
+                                <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                
+                              </div>
+                            </li>
+                            <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                              <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                              <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                              <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                              <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                              <li class="attendance-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
+                                <div class="emp-details d-flex align-items-center gap-2">
+                                  <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
+                                  <span class="fw-semibold">Kedar Rane</span>
+                                </div>
+                                <div class="arrival-time"> <!--This will have to be fetched according to the -->
+                                   10:15
+                                </div>
+                                <div class="d-flex gap-2">
+                                  <button type="button" class="btn btn-warning text-success">Approve</button>
+                                  <button type="button" class="btn btn-danger text-white">Disapprove</button>
+                                  
+                                </div>
+                              </li>
+                        </ul>
+
+                    </div> <!--End of attendance information-->
+                    </div><!-- end of infoSubcontainer-->
+                    <a href="./attendanceSheet.html" class="btn btn-warning border-black border-2" id="viewAttendanceBtn"><i class="bi bi-eye"> </i>View Attendance</a>
+                </div><!--Info -container-->
+            </div><!--Sub container to stack the elements vertically -->
+        </div><!--Content Container-->
+    </div> <!--Main container -->
+    <script src="../src/js/manageEmp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+<script src="script.js" type="text/javascript"></script>
+
+        
+  
+    
+</body>
+</html>

@@ -8,15 +8,14 @@ body
     background-color:#e3edf9;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .feature-description a:hover{
 
     text-decoration: none;
     opacity:50%;
-    
-
-
 
 }
+
 #sidebar
 {
     background-color: #121c3e;

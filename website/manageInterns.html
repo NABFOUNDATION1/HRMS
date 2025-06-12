@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     
-    <link rel="stylesheet" href="../src/css/mestyles.css">
+    <link rel="stylesheet" href="../src/css/mistyles.css">
 
 
     <title>Manage Employee</title>
@@ -78,55 +78,159 @@
         </div>
     </div>
 
-    <!--Modal for adding new employee form-->
-    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" id="addNewModal">
+    <!--Modal for adding new intern form-->
+    <div id="addInternModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" id="addNewModal">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
 
                 <div class="modal-header fw-bold fs-4">Enter the details</div>
                 <div class="modal-body">
-                    <form>
+                    <form class="step" id="step1">
                         <div class="row g-3">
-                            <div class="col me-3">
-                                <label for="firstName">First Name</label>
-                                <input id="firstName" type="text" class="form-control" placeholder="First Name">
-                            </div>
-                            <div class="col">
-                                 <label for="lastName">Last Name</label> 
-                                 <input id="lastName" type="text" class="form-control" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="row g-3 mt-4">
                             <div class="col me-3">
                                 <label for="fullName">Full Name</label>
                                 <input id="fullName" type="text" class="form-control" placeholder="Full Name as per Aadhar">
                             </div>
                             <div class="col">
-                                 <label for="employeeId">Last Name</label> 
-                                 <input id="employeeId" type="text" class="form-control" placeholder="Employee ID">
+                                 <label for="contactNumber">Contact Number</label> 
+                                 <input id="contactNumber" type="text" class="form-control" placeholder="Contact Number">
                             </div>
                         </div>
                         <div class="row g-3 mt-4">
                             <div class="col me-3">
-                                <label for="userId">Full Name</label>
+                                <label for="userId">User Id</label>
                                 <input id="userId" type="text" class="form-control" placeholder="User ID">
                             </div>
                             <div class="col">
-                                 <label for="password">Last Name</label> 
+                                 <label for="password">Password</label> 
                                  <input id="password" type="text" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="emailId">Email Address </label>
+                                <input id="emailId" type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <div class="col">
+                                 <label for="employeeId">Date of Birth</label> 
+                                 <input id="dob" type="date" class="form-control" placeholder="Date of Birth">
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="emergencyContact">Emergency Contact</label>
+                                <input type="text" class="form-control" placeholder="Emergency Contact">
+                            </div>
+                            <div class="col">
+                                <label for="emergencyRelation">Emergency Contact Relation</label>
+                                <br>
+                                <select name="emergencyRelation" id="emergencyRelation" class="mt-2">
+                                    <option value="father">Father</option>
+                                    <option value="mother">Mother</option>
+                                    <option value="localGuardian">Local Guardian</option>
+                                   
+                                </select>
+                              
                             </div>
                         </div>
                         <div class="row g-3 mt-4">
                             <div class="col me-3">
-                                <label for="contactNumber">Contact Number</label>
-                                <input type="text" class="form-control" placeholder="Contact Number">
+                                <label for="bloodGroup">Blood Group</label>
+                                <input type="text" class="form-control" placeholder="Blood Group">
                             </div>
                             <div class="col">
-                                <label for="dob">Date of Birth</label>
-                                <input type="date" id="dob" class="form-control">
+                                <label for="designation">Designation/department</label>
+                                <br>
+                                <select name="designation" id="designation" class="mt-2">
+                                    <option value="IT">Intern-IT</option>
+                                    <option value="socialMedia">Intern-Social Media</option>
+                                    <option value="development">Intern-Development</option>
+                                    <option value="other"> Other</option>
+                                   
+                                </select>
                               
                             </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col">
+                                <label for="address">Address</label>
+                                <br>
+                                <textarea name="address" id="address" placeholder="Enter Address" rows="2" cols="90"></textarea>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+                    <form class="step" id="step2">
+                        <div class="row g-3">
+                            <div class="col me-3">
+                                <label for="doj">Date of Joining</label>
+                                <input id="doj" type="date" class="form-control">
+                            </div>
+                            <div class="col">
+                                 <label for="duration">Duration</label> 
+                                 <br>
+                                 <select name="duration" id="duration" class="mt-2">
+                                    <option value="2months">Two Months</option>
+                                    <option value="3months">Three Months</option>
+                                    <option value="6months">Six Months</option>
+                                    <option value="other"> Other</option>
+                                   
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="aadharCard">Aadhar Card</label>
+                                <input id="aadharCard" type="file" class="form-control">
+                            </div>
+                            <div class="col">
+                                 <label for="password">Pan Card</label> 
+                                 <input id="panCard" type="file" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="passport">Passport </label>
+                                <input id="passport" type="file" class="form-control">
+                            </div>
+                            <div class="col">
+                                 <label for="marksheet">Marksheet</label> 
+                                 <input id="marksheet" type="file" class="form-control">
+                            </div>
+                        </div>
+                        <p class="fw-semibold mt-4">Bank Details</p>
+                        
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="accountHolderName">Account Holder Name</label>
+                                <input id="accountHolderName" type="text" class="form-control" placeholder="Account Holder Name">
+                            </div>
+                            <div class="col">
+                                <label for="accountNumber">Account Number</label>
+                                <input id="accountNumber" type="text" class="form-control" placeholder="Account Number">                            
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="ifscCode">IFSC Code</label>
+                                <input id="ifscCode" type="text" class="form-control" placeholder="IFSC Code">
+                            </div>
+                            <div class="col">
+                                <label for="branch">Branch</label>
+                                <input id="branch" type="text" class="form-control" placeholder="Account Number">                            
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label for="passbook">Passbook Copy</label>
+                                <input id="passbook" type="file" class="form-control">
+                            </div>
+                            
                         </div>
 
                         
@@ -135,8 +239,10 @@
                 </div> <!--End of Modal Body-->
 
                 <div class="modal-footer mt-4 d-flex justify-content-center gap-4">
-                    <button type="submit" class="btn btn-warning "><i class="bi bi-bookmark-plus"></i> Save</button>
-                    <button type="button" class="btn btn-danger " data-bs-dismiss="modal" data-bs-target="#addNewModal"><i class="bi bi-x-circle"></i> Cancel</button>
+                    <button type="submit" class="btn btn-success"><i class="bi bi-bookmark-plus"></i> Save</button>
+                    <button type="button" class="btn btn-danger " onclick="closeAddIntModal()"><i class="bi bi-x-circle"></i> Cancel</button>
+                    <button type="button" class="btn btn-warning" id="prevBtn" onclick="prevStep()">Prev <i class="bi bi-arrow-left"></i></button>
+                    <button type="button" class="btn btn-warning" id="nextBtn" onclick="nextStep()">Next <i class="bi bi-arrow-right"></i></button>
                     
 
                 </div> <!--End of modal Header-->
@@ -145,174 +251,138 @@
           
         </div><!--End of Modal Dialog-->
         
-    </div> <!--End of add new emp Modal-->
-<!--View employee details Modal -->
-    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" id="empDetailModal">
+    </div> <!--End of add new intern Modal-->
+<!--View intern details Modal -->
+    <div id="internDetailModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" id="internDetailModal">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
 
-                <div class="modal-header fw-bold fs-4">Employee details</div>  <!--Need to see about ids and handling-->
+                <div class="modal-header fw-bold fs-4">Intern details</div>  <!--Need to see about ids and handling-->
                 <div class="modal-body">
-                    <form class="step" id="step1">
+                    <form class="viewStep" id="viewStep1">
                         <div class="row g-3">
                             <div class="col me-3">
-                                <label>First Name</label>
-                                <p id="firstName"> first name</p>
+                                <label>Full Name as per Aadhar</label>
+                                <p id="intFullName"> first name</p>
                             </div>
                             <div class="col">
-                                 <label>Last Name</label> 
-                                 <p id="lastName"> last name</p> 
+                                 <label>Contact Number</label> 
+                                 <p id="intContactNumber"> contact number</p> 
                             </div>
                         </div>
 
                         <div class="row g-3 mt-4">
                             <div class="col me-3">
-                                <label for="fullName">Full Name as per Aadhar</label>
-                                <p id="fullName">full name</p> 
+                                <label>Full Name as per Aadhar</label>
+                                <p id="intUserId"> user id</p> 
                             </div>
                             <div class="col">
-                                 <label>Employee ID </label> 
-                                 <p id="employeeId">employee id</p> 
+                                 <label>Password</label> 
+                                 <p id="intPassword"> password</p> 
                             </div>
                         </div>
                         <div class="row g-3 mt-4">
                             <div class="col me-3">
-                                <label>User ID</label>
-                                <p id="userId">user id</p> 
+                                <label>Email Address</label>
+                                <p id="intEmailAddress"> email address</p> 
                             </div>
                             <div class="col">
-                                 <label>Password</label> 
-                                 <p id="password">password</p> 
+                                 <label>Date of Birth</label> 
+                                 <p id="intDob"> 21/10/2003</p> 
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label>Emergency Contact</label>
+                                <p id="intEmergencyContact"> emergency Conact</p> 
+                            </div>
+                            <div class="col">
+                                <label>Emergency Contact Relation</label>
+                                <p id="intEmergencyRelation"> Father</p> 
+                              
                             </div>
                         </div>
                         <div class="row g-3 mt-4">
                             <div class="col me-3">
                                 <label>Blood Group</label>
-                                <p id="bloodGroup">full name</p> 
+                                <p id="intBloodGroup"> emergency Conact</p> 
                             </div>
                             <div class="col">
-                                <label>Date of Birth</label>
-                                <p id="dob">full name</p> 
+                                <label>Designation/Department</label>
+                                <p id="intDesignation"> Father</p> 
                               
                             </div>
+                        </div>
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label>Address</label>
+                                <p id="intAddress"> emergency Conact</p> 
+                            </div>
+                            
                         </div>
 
                         
-                    </form> <!--End of basic details-->
-                <!--Contact Details-->
-                    <form class="step" id="step2" style="display:none;">
-                        <div class="row g-3">
-                            <div class="col me-3">
-                                <label> Contact Number</label>
-                                <p id="contactNumber">contact number</p>
-                            </div>
-                            <div class="col">
-                                 <label>Email Address</label> 
-                                 <p id="emailAddress"> last name</p> 
-                            </div>
-                        </div>
-
-                        <div class="row g-3 mt-4">
-                            <div class="col me-3">
-                                <label>Alternate phone number</label>
-                                <p id="alternateContact">alternate</p> 
-                            </div>
-                            <div class="col">
-                                 <label>Address</label> 
-                                 <p id="employeeAddress">employee id</p> 
-                            </div>
-                        </div>
-                        <div class="row g-3 mt-4">
-                            <div class="col me-3">
-                                <label>City</label>
-                                <p id="employeeCity">city</p> 
-                            </div>
-                            <div class="col">
-                                 <label>State</label> 
-                                 <p id="employeeState">state</p> 
-                            </div>
-                        </div>
-                        <div class="row g-3 mt-4">
-                            <div class="col me-3">
-                                <label>Postal Code</label>
-                                <p id="employeePostalCode">postal code</p> 
-                            </div>
-                            <div class="col">
-                                <label>Country</label>
-                                <p id="employeeCountry">Country</p> 
-                              
-                            </div>
-                        </div>
-                        <div class="row g-3 mt-4">
-                            <div class="col me-3">
-                                <label>Emergency Contact </label>
-                                <p id="employeeEmergencyContact">emergency contact</p> 
-                              
-                            </div>
-                            <div class="col">
-                                <label>Country</label>
-                                <p id="employeeEmergencyRelation">emergency contact relation</p> 
-                              
-                            </div>
-                        </div> 
-                        
-
-                        
-                    </form> <!--End of contact details-->
-
-<!--Education Details-->
-                    <form class="step" id="step3" style="display:none;">
+                    </form> <!--End of details page 1-->
+                <!--Details Page 2-->
+                    <form class="viewStep" id="viewStep2" style="display:none;">
                         <div class="row g-3">
                             <div class="col me-3 d-flex justify-content-between">
-                                <label>12th Board</label>
-                                <a href="#" class="download-link btn btn-primary">View Certificate</a> <!-- server File path to be given-->
-                            </div>
-                           
-                        </div>
-                        <div class="row g-3 mt-4">
-                            <div class="col me-3 d-flex justify-content-between">                               
-                                    <label>10th Board</label> 
-                                    <a href="#" class="download-link btn btn-primary">View Certificate</a> <!-- server File path to be given-->
+                                <label>Aadhar Card</label>
+                                <a href="#" class="download-link btn btn-primary">View Aadhar Card</a>
                             </div>
                             
                         </div>
 
                         <div class="row g-3 mt-4">
                             <div class="col me-3 d-flex justify-content-between">
-                                <label>Undergraduate Degree</label> 
-                                <a href="#" class="download-link btn btn-primary">View Certificate</a> <!-- server File path to be given-->
+                                <label>Pan Card</label>
+                                <a href="#" class="download-link btn btn-primary">View Pan Card</a>
+                                
                             </div>
-                           
+                            
                         </div>
+                        
                         <div class="row g-3 mt-4">
                             <div class="col me-3 d-flex justify-content-between">
-                                <label>Post Graduate Degree</label> 
-                                 <a href="#" class="download-link btn btn-primary">View Certificate</a>
-                            </div>
-                        
+                                <label>Passport</label>
+                                <a href="#" class="download-link btn btn-primary">View Passport</a> 
+                            </div>                            
                         </div>
                         <div class="row g-3 mt-4">
-                            <div class="col me-3 d-flex justify-content-between">
-                                <label>PHD</label> 
-                                 <a href="#" class="download-link btn btn-primary">View Certificate</a>
+                            <h5>Bank Details</h5>
+                            <div class="col me-3">
+                                <label>Account Holder Name</label>
+                                <p id="intAccHolderName"> sdghhjds</p> 
                             </div>
-                        
+                            <div class="col">
+                                <label>Account Number</label>
+                                <p id="intAccNumber"> 847834</p> 
+                              
+                            </div>
                         </div>
-                       
+                        <div class="row g-3 mt-4">
+                            <div class="col me-3">
+                                <label>IFSC Code </label>
+                                <p id="intIfscCode"> gsdjc026r9</p> 
+                              
+                            </div>
+                            <div class="col">
+                                <label>Branch</label>
+                                <p id="intBranch"> BKC</p> 
+                              
+                            </div>
+                        </div> 
                         
-                        
 
                         
-                    </form> <!--End of contact details-->
-
-
-
+                    </form> <!--End of intern details-->
+                
                 </div> <!--End of Modal Body-->
 
                 <div class="modal-footer mt-4 d-flex justify-content-center gap-4"> 
-                    <button type="button" class="btn btn-warning " onclick="prevStep()"><i class="bi bi-arrow-left"></i> prev </button>
-                    <button type="button" class="btn btn-warning " onclick="nextStep()"> next <i class="bi bi-arrow-right"></i></button>
-                    <button type="button" class="btn btn-danger" onclick="closeEmpDetailModal()"><i class="bi bi-x"></i>Close</button>
+                    <button type="button" class="btn btn-warning " onclick="prevViewStep()"><i class="bi bi-arrow-left"></i> prev </button>
+                    <button type="button" class="btn btn-warning " onclick="nextViewStep()"> next <i class="bi bi-arrow-right"></i></button>
+                    <button type="button" class="btn btn-danger" onclick="closeInternDetailModal()"><i class="bi bi-x"></i>Close</button>
                     
 
                 </div> <!--End of modal footer-->
@@ -321,7 +391,7 @@
           
         </div><!--End of Modal Dialog-->
         
-    </div> <!--End of view emp details Modal-->
+    </div> <!--End of view intern details Modal-->
     <div class="main-container d-flex flex-row">
         <nav class="d-flex flex-column  text-white vh-100 p-3 rounded-3 shadow-lg"  id="sidebar" style="width:17rem">
             
@@ -493,19 +563,19 @@
                 <div class="info-container m-4 p-3">
                     <div class="info-subcontainer d-flex flex-column gap-4 m-5">
                         <div class="employee-information overflow-auto bg-white w-100 rounded-2 p-3">
-                          <header class="fw-bold fs-5 mb-3">Employees</header>
+                          <header class="fw-bold fs-5 mb-3">Interns</header>
                           <ul class="employee-list p-0 m-0">
                             <!--li replicated here for demonstration. loops to be used-->
                             <li class="employee-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
                               <div class="d-flex align-items-center gap-2">
                                 <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
-                                <span class="fw-semibold">Kedar Rane</span>
+                                <span class="fw-semibold">Radhe Kumar Mishra</span>
                               </div>
                               <div class="employee-position">
-                                 SPA-IT
+                                 Intern-IT
                               </div>
                               <div class="d-flex gap-2">
-                                <button type="button" class="btn-icon" onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                <button type="button" class="btn-icon" onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                 <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                 <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -514,13 +584,13 @@
                             <li class="employee-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
                                 <div class="d-flex align-items-center gap-2">
                                   <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
-                                  <span class="fw-semibold">Kedar Rane</span>
+                                  <span class="fw-semibold">Radhe Kumar Mishra</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-Development
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon"  onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon"  onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon" ><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -529,13 +599,13 @@
                               <li class="employee-item d-flex align-items-center justify-content-between rounded-4 p-2 mb-2">
                                 <div class="d-flex align-items-center gap-2">
                                   <img src="../assets/images/avatar.jpg" class="rounded-circle" style="width:30px; height:30px;">
-                                  <span class="fw-semibold">Kedar Rane</span>
+                                  <span class="fw-semibold">Radhe Kumar Mishra</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-Social Media
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon"  onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon"  onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -547,10 +617,10 @@
                                   <span class="fw-semibold">Kedar Rane</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-IT
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon"  onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon"  onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -562,10 +632,10 @@
                                   <span class="fw-semibold">Kedar Rane</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-IT
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon" onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon" onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -577,10 +647,10 @@
                                   <span class="fw-semibold">Kedar Rane</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-IT
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon"  onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon"  onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -592,10 +662,10 @@
                                   <span class="fw-semibold">Kedar Rane</span>
                                 </div>
                                 <div class="employee-position">
-                                    SPA-IT
+                                    Intern-IT
                                  </div>
                                 <div class="d-flex gap-2">
-                                  <button type="button" class="btn-icon"  onclick="openEmpDetailModal()"><i class="bi bi-eye"></i></button>
+                                  <button type="button" class="btn-icon"  onclick="openInternDetailModal()"><i class="bi bi-eye"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-download"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-pencil-square"></i></button>
                                   <button type="button" class="btn-icon"><i class="bi bi-trash3"> </i></button>
@@ -605,12 +675,12 @@
 
                     </div> <!--End of employee information-->
                     </div><!-- end of infoSubcontainer-->
-                    <button class="btn btn-warning border-black border-2" id="addNewBtn" data-bs-toggle="modal" data-bs-target="#addNewModal"><i class="bi bi-person-plus"> </i>Add New</button>
+                    <button class="btn btn-warning border-black border-2" id="addNewBtn" onclick="openAddIntModal()"><i class="bi bi-person-plus"> </i>Add New</button>
                 </div><!--Info -container-->
             </div><!--Sub container to stack the elements vertically -->
         </div><!--Content Container-->
     </div> <!--Main container -->
-    <script src="../src/js/manageEmp.js"></script>
+    <script src="../src/js/manageInt.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

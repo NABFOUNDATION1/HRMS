@@ -1,0 +1,95 @@
+body
+{
+    background-color: #e3edf9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.feature-description a:hover{
+
+    text-decoration: none;
+    opacity:50%;
+
+}
+
+#sidebar
+{
+    background-color: #121c3e;
+}
+
+.table-wrapper {
+    
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.container1
+{
+    background-color: #dae4fe;
+}
+.container2
+{
+    background-color: #dae4fe;
+}
+
+
+
+    
+    
+    .ApprovalTable {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+    }
+    
+    .ApprovalTable th,
+    .ApprovalTable td {
+        border-bottom: 1px solid black;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    /* Reset icon styles */
+    .ApprovalTable td i {
+       
+        line-height: 1;
+        vertical-align: middle;
+        margin: 0 5px;
+        font-size: 1.2rem;
+    }
+    .pendingApprovalTable {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+    }
+    
+    .pendingApprovalTable th,
+    .pendingApprovalTable td {
+        border-bottom: 1px solid black;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    /* Reset icon styles */
+    .pendingApprovalTable td i {
+       
+        line-height: 1;
+        vertical-align: middle;
+        margin: 0 5px;
+        font-size: 1.2rem;
+    }
+
+.actions button
+{
+    background-color: transparent;
+    border:none;
+}
+    
+   
+   
+
+
+
+
+

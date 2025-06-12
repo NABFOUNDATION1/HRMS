@@ -3,33 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
-    
     <link rel="stylesheet" href="../src/css/dstyles.css">
-
-
     <title>Dashboard</title>
 </head>
-
 <body>
-    
-    <header class="header top-0 start-0 end-0 z-3 m-4">
-
+       <header class="header top-0 start-0 end-0 z-3 m-4">
         <div class="header-container d-flex justify-content-between shadow-sm p-2 rounded-1">
-
             <div class="header-icons">
-            <button  type="button" id="home"  style="border:none; background-color: transparent;">
-                <i class="bi bi-house-fill"></i>
-             </button>
-             <button type="button" id= "notifications" data-bs-toggle="modal" data-bs-target="#notificationsModal" style="border:none; background-color: transparent;">
+              <a class="btn mb-1" href="./dashboard.html"><i class="fs-5 bi bi-house-fill"> </i></a>           
+             <button type="button" id= "notifications" data-bs-toggle="modal" data-bs-target="#notificationsModal" style="border:none; background-color: transparent; font-size: large;"> 
                 <i class="bi bi-bell"> </i>
-
              </button>
             </div>
              <form role="search">
@@ -52,10 +38,8 @@
                 Previous Employees
             </button>
         </div>
-
     </header>
-
-    <!--Modal for notifications popup , triggered by bells icon in header -->
+   <!--Modal for notifications popup , triggered by bells icon in header -->
     <div class="modal fade" id="notificationsModal" aria-hidden="true"> 
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
             <div class="modal-content">
@@ -100,7 +84,7 @@
                         </div>
 
                         <div class="feature-description ms-3">
-                            <a class="mb-0  text-light" href="#"> Profile </a>
+                            <a class="mb-0  text-light" href="./profile.html"> Profile </a>
                         </div>
 
                     </div>
@@ -111,7 +95,7 @@
                         </div>
 
                         <div class="feature-description ms-3">
-                            <a class="mb-0  text-light" href="#"> Manage Employees</a>
+                            <a class="mb-0  text-light" href="./manageEmployee.html"> Manage Employees</a>
                         </div>
 
                     </div>
@@ -121,7 +105,7 @@
                         </div>
 
                         <div class="feature-description ms-3">
-                            <a class="mb-0  text-light" href="#"> Manage Attendance </a>
+                            <a class="mb-0  text-light" href="./manageAttendance.html"> Manage Attendance </a>
                         </div>
 
                     </div>
@@ -131,7 +115,7 @@
                         </div>
 
                         <div class="feature-description ms-3">
-                            <a class="mb-0  text-light" href="#"> Manage Interns </a>
+                            <a class="mb-0  text-light" href="./mana"> Manage Interns </a>
                         </div>
 
                     </div>
@@ -172,10 +156,7 @@
                         </div>
 
                         <button type="button" id="logoutButton" class="btn btn-danger">Logout </button>
-
-                    </div>
-
-                    
+                    </div>                    
                 </div>          
         </nav> <!--End of sidebar-->
 
@@ -325,10 +306,7 @@
                                 </div>
                               </li>
                         </ul>
-
                     </div> <!--End of employee information-->
-
-
                     <div class="d-flex flex-row justify-content-between gap-3"> <!--flex row below employees-->
                         <div class="latecomers-information bg-white overflow-y-auto rounded-2 p-3 flex-fill">
                             <header class="fw-bold fs-5 mb-3"> Latecomers this Month </header>
@@ -387,16 +365,7 @@
                             </ul>
                         
                         </div><!--End of pay slip-->
-    
-
                     </div>
-                    
-                      
-                      
-
-                      
-
-
                     </div><!--grid-->
                 </div><!--Info -container-->
             </div><!--Sub container to stack the elements vertically -->
@@ -406,12 +375,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
-
-<script src="script.js" type="text/javascript"></script>
-
-        
-  
-    
+    crossorigin="anonymous"></script>    
 </body>
 </html>

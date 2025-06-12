@@ -76,11 +76,11 @@ body
 }
 
   
-  .employee-list {
+  .attendance-list {
     list-style: none;
   }
   
-  .employee-item {
+  .attendance-item {
     background-color: #e3edf9;
   }
   
@@ -122,9 +122,8 @@ body
     cursor: pointer;
   }
   
-#addNewBtn
+#viewAttendanceBtn
 {
-    margin-top:1rem;
+    
     margin-left:32rem;
 }
-
